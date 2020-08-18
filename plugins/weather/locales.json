@@ -1,0 +1,14 @@
+{
+  "weather": "Wetter",
+  "your_current_location": "Dein aktueller Standort: ",
+  "currently": "Aktuell",
+  "today_forecast": "Vohersage für Heute",
+  "tomorrow_forecast": "Vohersage für Morgen",
+  "prefix": "",
+  "middle": " bei ",
+  "suffix": " °C",
+  "temperatures_between": "Temperaturen zwischen ",
+  "and": " und ",
+  "warning": "Aktuell liegt eine Warnung für deinen Standort vor",
+  "embed_footer": "Alle Angaben ohne Gewähr - Daten von weather.service.msn.com"
+}

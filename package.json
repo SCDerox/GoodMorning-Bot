@@ -1,0 +1,29 @@
+{
+  "name": "goodmorning-bot",
+  "version": "1.0.0",
+  "description": "A Discord-Bot ",
+  "main": "bot.js",
+  "scripts": {
+    "test": "node bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SCDerox/GoodMorning-Bot.git"
+  },
+  "keywords": [
+    "Discord-Bot"
+  ],
+  "author": "SCDerox (https://scderox.de)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/SCDerox/GoodMorning-Bot/issues"
+  },
+  "homepage": "https://github.com/SCDerox/GoodMorning-Bot#readme",
+  "dependencies": {
+    "discord.js": "^12.3.1",
+    "newyorktimes": "0.0.2",
+    "requestify": "^0.2.5",
+    "wakatime": "^1.2.0",
+    "weather-js": "^2.0.0"
+  }
+}

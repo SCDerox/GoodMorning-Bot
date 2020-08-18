@@ -1,0 +1,7 @@
+{
+  "embed_title": "Aktuelle Uhrzeit",
+  "embed_footer": "Aktuelle Uhrzeit in der Zeitzone MESZ UTC +2h (Sommerzeit)",
+  "prefix": "Es ist ",
+  "hour": " Uhr und ",
+  "minute": " Minuten"
+}

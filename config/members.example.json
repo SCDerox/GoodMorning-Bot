@@ -1,0 +1,28 @@
+{
+  "413429490342035466": {
+    "active": true,
+    "name": "Simon",
+    "id": "413429490342035466",
+    "plugins": {
+      "weather": {
+        "location": "Fürstenried, Munich, Germany"
+      },
+      "covid19": {
+        "country": "DE"
+      },
+      "wakatime": {
+        "api_key": ""
+      }
+    },
+    "plugins_settings": {
+      "covid19": true,
+      "nasa-image-of-the-day": true,
+      "nyt-most-popular-articels": true,
+      "tronald-dump": true,
+      "weather": true,
+      "tips": true,
+      "current-time": true,
+      "german-quotes": true
+    }
+  }
+}

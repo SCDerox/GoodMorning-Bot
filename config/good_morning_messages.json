@@ -1,0 +1,15 @@
+[
+  {
+    "greeting": "Guten Morgen",
+    "message": "Ich hoffe, du hast gut geschlafen!",
+    "farawell": "Das war's dann für heute, bis morgen!",
+    "plugin_notice": "Ich schicke dir die Nachrichten deiner aktivierten Plugins mit!",
+    "why_getting_this_message": "Ich habe gemerkt, dass du heute zum erstenmal online bist, also dachte ich mir, ich schicke dir eine nette Nachricht :heart:",
+    "unsubscribe": "Falls du keine Nachrichten mehr bekommen möchtest, schreibe einfach `%prefix%unsubscribe`",
+    "to_the_first_message": "Das war eine ganze Menge, hier geht es nach oben: ",
+    "embed": {
+      "color": "GREEN",
+      "image": null
+    }
+  }
+]

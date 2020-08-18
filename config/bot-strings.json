@@ -1,0 +1,22 @@
+{
+  "command_not_found": "Dieser Command wurde leider nicht gefunden",
+  "command_only_for_bot_owner": "Das darf nur der Bot-Besitzer",
+  "need_more_arguments": "Es werden mehr Argumente benötigt",
+  "please_subscirbe_first": "Bitte abonniere deine persönlichen täglichen Guten-Morgen-Nachrichten zuerst! Nutze dafür einfach `g!subscribe`. Thx :heart:",
+  "are_you_sure": "Bist du sicher?",
+  "do_you_really_want_to_unsubscribe": "Bist du sicher, dass du keine persönlichen Guten-Morgen-Nachrichten erhalten möchtest?",
+  "write_command_to_contiue": "Bestätige mit bitte, indem du `%command%` eingibst.",
+  "success": "Aktion durchgeführt",
+  "already_subscirbed": "Du bist bereits ein Abonnent",
+  "you_are_not_registed_yet": "Scheint als wärst du noch nicht im Tester-Club! Schreib SCDerox#4645",
+  "successfuly_subscribed": "Du hast dich erfolgreich angemeldet! Du erhälst deine erste Guten-Morgen-Nachricht morgen (oder evtl. auch heute), wenn du online kommst.\n\nKannst du nicht warten? Lass dir die Nachricht mit `g!gm` zuschicken.",
+  "successfuly_unsubscribed": "Du hast dich erfolgreich abgemeldet. Du wirst keine weiteren Guten-Morgen-Nachrichten bekommen ):\n\nDu kannst dich mit `g!subscribe` erneut anmelden!",
+  "plugin_command": {
+    "list_title": "Plugins - List",
+    "list_description": "Hier ist eine Liste aller Plugins\n\nDie Leuchte neben dem Namen zeigt dir an, ob du das Plugin aktiviert hast\n\n🔧 zeigt an, ob dieses Plugin konfiguriert werden muss\n\nZum Aktivieren: `%prefix%plugin activate <Plugin-Dir>`\nZum Deaktivieren: `%prefix% plugin deactivate <Plugin-Dir>`",
+    "list_footer": "Vorschlag für ein Plugin? Schreib SCDerox#4645"
+  },
+  "developed_by": "entwicklet von",
+  "plugin_does_not_exist_or_not_set": "Dieses Plugin exestiert nicht oder es fehlt ein Argument",
+  "successfuly_edited": "Erfolgreich geändert."
+}
