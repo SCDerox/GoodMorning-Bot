@@ -1,17 +1,10 @@
 /*
  * Copyright (c) 2020. Simon Csaba
- * Licensed under Apache License 2.0
+ * Licensed under GNU General Public License v3.0
  * Any changes must be documented as per the license!
  */
 
 const {WakaTime} = require("wakatime");
-
-/*
- * Copyright (c) 2020. Simon Csaba
- * Licensed under Apache License 2.0
- * Any changes must be documented as per the license!
- */
-
 const {MessageEmbed} =  require("discord.js");
 const strings = require("./strings.json")
 
@@ -23,7 +16,6 @@ module.exports.good_morning_embed = function (config_member) {
             resolve(new MessageEmbed().setTitle("missing api key for wakatime").setColor("RED").setDescription("please set a wakatime key."))
         }
         const wakaTimeInstance = new WakaTime(config_member["plugins"]["wakatime"]["api_key"])
-        console.log(config_member["plugins"]["wakatime"]["api_key"])
         wakaTimeInstance.stats('last_7_days').then((r) => {
             if (r) {
                 r = r["data"]
@@ -50,5 +42,6 @@ module.exports.config = {
     "description": "Shows stats from the last 7 days",
     "send_good_morning_embed": true,
     "need_config": true,
+    "not_automatically_enabled": true,
     "not_editable": true
 }

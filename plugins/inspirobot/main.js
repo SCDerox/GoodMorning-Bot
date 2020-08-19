@@ -10,18 +10,19 @@ const requestify = require("requestify");
 
 module.exports.good_morning_embed = function (config_member) {
     return new Promise(function (resolve, reject) {
-        requestify.get('https://www.tronalddump.io/random/quote').then(function(response) {
+        requestify.get('https://inspirobot.me/api?generate=true').then(function(response) {
             response = response.getBody();
             resolve(new MessageEmbed()
                 .setTitle(strings["embed_title"])
                 .setColor(0xd35400)
-                .setDescription(response["value"] + "\n[" + strings["source"] + "](" + response["_links"]["self"]["href"] + ")")
+                .setDescription(strings["embed_description"])
                 .setTimestamp()
-                .setURL(response["_links"]["self"]["href"])
-                .setAuthor("Tronald Dump", "https://www.tronalddump.io/img/tronalddump_850x850.png")
-                .setThumbnail("http://kwtri4b8r0ep8ho61118ipob.wpengine.netdna-cdn.com/wp-content/uploads/2017/10/19535228309_141913cee1_o.jpg")
+                .setURL(response)
+                .setImage(response)
+                .setAuthor("inspirobot.me", "http://inspirobot.me/website/images/inspirobot-dark-green.png")
+                .setThumbnail("http://inspirobot.me/website/images/inspirobot-dark-green.png")
                 .setFooter(strings["embed_footer"])
-                .setTimestamp(response["appeared_at"])
+                .setTimestamp()
             );
         });
     });
@@ -29,8 +30,8 @@ module.exports.good_morning_embed = function (config_member) {
 
 
 module.exports.config = {
-    "name": "Tronald Dump",
+    "name": "Inspirobot",
     "author": "SCDerox",
-    "description": "Shows a random dumb quote from Donald Trump",
+    "description": "Display motivational image",
     "send_good_morning_embed": true
 }

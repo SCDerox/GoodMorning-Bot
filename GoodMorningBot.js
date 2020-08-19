@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2020. Simon Csaba
- * Licensed under Apache License 2.0
+ * Licensed under GNU General Public License v3.0
  * Any changes must be documented as per the license!
  */
 
@@ -46,6 +46,7 @@ fs.readdir('./src/commands/', (err, files) => {
 client.on("message", async message => {
     try {
         if (message.author.bot) return;
+        if (!message.content.startsWith(config.prefix)) return;
         const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
         let command = args.shift().toLowerCase();
         if (!client.aliases.has(command)) return message.author.send(bot_strings["command_not_found"]);

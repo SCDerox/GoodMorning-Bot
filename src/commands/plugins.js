@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2020. Simon Csaba
- * Licensed under Apache License 2.0
+ * Licensed under GNU General Public License v3.0
  * Any changes must be documented as per the license!
  */
 
@@ -29,11 +29,16 @@ module.exports.run = async (client, msg, args, utils, members) => {
             for (let i in plugins) {
                 let plugin = plugins[i]
                 let led = "🔴";
+                let prefix = "";
                 let config = ""
                 if (members[msg.author.id]["plugins_settings"][plugin["dirName"]]) led = "🟢"
+                else if (members[msg.author.id]["plugins_settings"][plugin["dirName"]] === undefined) {
+                    if (!plugin["config"]["not_automatically_enabled"]) led = "🟢";
+                    prefix = "🆕"
+                }
                 if (plugin["config"]["need_config"]) config = "🔧";
                 if (plugin["config"]["not_editable"]) config = config + " 🔐"
-                emb.addField(plugin["config"]["name"] + " " + led + " " + config, "`" + plugin["config"]["description"] + "`\nDir: `" + plugin["dirName"] + "`")
+                emb.addField(prefix + " " + plugin["config"]["name"] + " " + led + " " + config, "`" + plugin["config"]["description"] + "`\nDir: `" + plugin["dirName"] + "`")
             }
             return msg.author.send(emb);
         }
@@ -66,9 +71,5 @@ module.exports.help = {
 module.exports.config = {
     args: false,
     restricted: false
-};/*
- * Copyright (c) 2020. Simon Csaba
- * Licensed under Apache License 2.0
- * Any changes must be documented as per the license!
- */
+};
 

@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2020. Simon Csaba
- * Licensed under Apache License 2.0
+ * Licensed under GNU General Public License v3.0
  * Any changes must be documented as per the license!
  */
 

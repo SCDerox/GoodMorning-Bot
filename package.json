@@ -2,9 +2,9 @@
   "name": "goodmorning-bot",
   "version": "1.0.0",
   "description": "A Discord-Bot ",
-  "main": "bot.js",
+  "main": "GoodMorningBot.js",
   "scripts": {
-    "test": "node bot.js"
+    "test": "node GoodMorningBot.js"
   },
   "repository": {
     "type": "git",

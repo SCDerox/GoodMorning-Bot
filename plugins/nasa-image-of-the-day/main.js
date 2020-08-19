@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2020. Simon Csaba
- * Licensed under Apache License 2.0
+ * Licensed under GNU General Public License v3.0
  * Any changes must be documented as per the license!
  */
 
@@ -14,6 +14,7 @@ module.exports.good_morning_embed = function (config_member) {
     return new Promise(function (resolve, reject) {
         requestify.get('https://api.nasa.gov/planetary/apod?api_key=' + config["api-key"] + '&count=1').then(function(response) {
             response = response.getBody()[0];
+            if (!response["copyright"]) response["copyright"] = "NASA"
             resolve(new MessageEmbed()
                 .setTitle(strings["embed_title"])
                 .setColor(0x34495e)
