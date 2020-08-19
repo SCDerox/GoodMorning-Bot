@@ -14,7 +14,7 @@ module.exports.good_morning_embed = function (config_member) {
             .setTitle(strings["embed_title"])
             .setFooter(strings["embed_footer"])
             .setDescription(strings["prefix"] + today.getHours() + strings["hour"] + today.getMinutes() + strings["minute"])
-            .setAuthor("Good Morning Bot Tips", "https://cdn.discordapp.com/avatars/745173913428033537/da26ad5f3259500e45396a2bc57cf1eb.png")
+            .setAuthor("Good Morning Bot", "https://cdn.discordapp.com/avatars/745173913428033537/da26ad5f3259500e45396a2bc57cf1eb.png")
             .setColor(0xecf0f1)
             .setThumbnail("https://media1.tenor.com/images/5b00eb97755ca1d241480774a4102717/tenor.gif?itemid=7378835"))
 

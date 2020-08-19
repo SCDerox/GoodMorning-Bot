@@ -13,7 +13,7 @@ function translate(text) {
     if (wetter_translations[text]) {
         return wetter_translations[text]
     }else {
-        return text + " (Übersetztung fehlend)"
+        return text + " (" + strings["translation_missing"] + ")"
     }
 }
 

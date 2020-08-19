@@ -10,5 +10,6 @@
   "temperatures_between": "Temperaturen zwischen ",
   "and": " und ",
   "warning": "Aktuell liegt eine Warnung für deinen Standort vor",
-  "embed_footer": "Alle Angaben ohne Gewähr - Daten von weather.service.msn.com"
+  "embed_footer": "Alle Angaben ohne Gewähr - Daten von weather.service.msn.com",
+  "translation_missing": "Übersetzung fehlend"
 }
