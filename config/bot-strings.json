@@ -18,5 +18,6 @@
   },
   "developed_by": "entwicklet von",
   "plugin_does_not_exist_or_not_set": "Dieses Plugin exestiert nicht oder es fehlt ein Argument",
-  "successfuly_edited": "Erfolgreich geändert."
+  "successfuly_edited": "Erfolgreich geändert.",
+  "only_pns": "Um deine Privatsphäre zu schützten, reagiere ich nur in Privatnachrichten auf deine Commands!"
 }

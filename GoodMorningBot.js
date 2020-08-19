@@ -76,6 +76,7 @@ client.on("message", async message => {
         fs.readFile('config/members.json', async function (err, data) {
             if (err) throw new Error()
             const members = JSON.parse(data);
+            if (message.channel.name !== undefined) return message.channel.send(bot_strings["only_pns"])
             if (!members[message.author.id]) return await message.author.send(bot_strings["you_are_not_registed_yet"])
             if (!client.aliases.has(command)) {
                 command = client.pluginCommands.get(command);
