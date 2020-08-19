@@ -1,8 +1,9 @@
 {
   "Cloudy": "Bewölkt",
-  "Rain Showers": "Teilweise Regenschauer",
+  "Rain Showers": "Regenschauer",
   "Partly Sunny": "Teilweise sonnig",
-  "Rain": "Regenerisch",
+  "Rain": "Regen",
   "Sunny": "Sonnig",
-  "Light Rain": "Leicht Regnerisch"
+  "Light Rain": "Leichter Regen",
+  "Mostly Cloudy": "Großteils Bevölkt"
 }
