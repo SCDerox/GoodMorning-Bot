@@ -3,14 +3,43 @@ Good Morning Discord-Bot
 This discord-bot greets you every day, when you are first online. 
 You can configure what messages you want to get with plugins. [Read more about Plugins](https://github.com/SCDerox/GoodMorning-Bot/wiki).
 
+---
 
-#### Important:
-`This bot is desinged to work for me and some friends and does not need database. You should not use this bot as a public one, because everything is stored in JSON files`
+### Localization
+You can translate (almost) everything. Every plugin has locales (oder strings) file, where you can translate everything.
+The main bot also has some localization-files in the config folder. 
+
+---
+
+### Installation
+1) Copy this repository
+2) Install dependencies with `npm i`
+3) Rename *every* `something.example.json` file to `something.json` and configure them. You may need 
+to do this some plugin folders.
+4) Delete the `example-plugin` folder in your `plugins` folder, if you don't need it
+5) Start the bot with `npm test` (or with pm2 (suggested): `pm2 start GoodMorningBot.js`)
+
+---
+
+### Add a member
+Currently you only can add members in your `members.json` file. I'm also working on a command for that.
+A example for a user-configuration can be found in `members.example.json`.
+
+---
+### Plugins
+SOON™ 
+
+---
+
+### Important:
+`This bot is desinged to work for me and some friends and does not need database. You should not use this bot as a public one, because everything is stored in JSON files (Note: I will maybe add DB-support later)`
 
 `This repositiory conains shitcode: I developed most of this code on one day (;`
 
 `My English is really bad, so sorry ):`
 
-##### Contributing
+---
+
+#### Contributing
 I have planed some more features, you can find a Roadmap [here](https://github.com/SCDerox/GoodMorning-Bot/projects/1).
-Feel free to create an issue or even a pull request. 
+Feel free to create an issue if you have any suggestions.
