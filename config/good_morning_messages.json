@@ -1,15 +1,15 @@
 [
   {
-    "greeting": "Guten Morgen",
-    "message": "Ich hoffe, du hast gut geschlafen!",
-    "farawell": "Das war's dann für heute, bis morgen!",
-    "plugin_notice": "Ich schicke dir die Nachrichten deiner aktivierten Plugins mit!",
-    "why_getting_this_message": "Ich habe gemerkt, dass du heute zum erstenmal online bist, also dachte ich mir, ich schicke dir eine nette Nachricht :heart:",
+    "greeting": "Schnapp dir einen Kaffee",
+    "message": "Guten Morgen, %name%! Ich wünsche dir, wie immer einen tollen Start in den Tag!\nFalls du noch Müde sein solltest, mach dir am Besten einen Kaffee und geneise ihn!",
+    "farawell": "Das war für's Erste alles, wir sehen uns morgen wieder!",
+    "plugin_notice": "Gleich bekommst du noch einige Nachrichten deiner aktivieren Plugins. Du kannst diese Nachrichten mit `%prefix%plugins` bearbeiten",
+    "why_getting_this_message": "Du bist anscheinend das erste mal heute online, deswegen bekommst du eine kurze Nachricht von mir :+1:",
     "unsubscribe": "Falls du keine Nachrichten mehr bekommen möchtest, schreibe einfach `%prefix%unsubscribe`",
-    "to_the_first_message": "Das war eine ganze Menge, hier geht es nach oben: ",
+    "to_the_first_message": "Uff, du hast aber viele Plugins aktiviert... Hier geht es nach oben: ",
     "embed": {
       "color": "GREEN",
-      "image": null
+      "image": "https://media.giphy.com/media/mUkXLWyeS8uvC/source.gif"
     }
   }
 ]

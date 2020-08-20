@@ -10,8 +10,9 @@ const {sendAllGoodMorningEmbeds} = require("./plugins");
 const { MessageEmbed } = require("discord.js")
 const config = require("../../config/config.json")
 
-function replacer(text) {
-    return text.replace("%prefix%", config.prefix)
+function replacer(text, name) {
+    text = text.split("%name%").join(name)
+    return text.split("%prefix%").join(config.prefix)
 }
 
 module.exports.send_good_morning_message = async function (member, config_member) {
@@ -22,12 +23,12 @@ module.exports.send_good_morning_message = async function (member, config_member
     if (message["embed"]) {
         emb = new MessageEmbed()
             .setThumbnail("https://cdn.discordapp.com/avatars/745173913428033537/da26ad5f3259500e45396a2bc57cf1eb.png")
-            .setTitle(message["greeting"] + ", " + config_member["name"] + "!")
-            .setDescription(message["message"] + "\n\n" + message["why_getting_this_message"] + "\n\n" + message["plugin_notice"] + "\n\n" + message["unsubscribe"])
+            .setTitle(replacer(message["greeting"], config_member["name"]))
+            .setDescription(replacer(message["message"], config_member["name"]) + "\n\n" + replacer(message["why_getting_this_message"], config_member["name"]) + "\n\n" + replacer(message["plugin_notice"], config_member["name"]) + "\n\n" + replacer(message["unsubscribe"], config_member["name"]))
             .setColor(message["embed"]["color"]);
         if (message["embed"]["image"]) emb.setImage(message["embed"]["image"])
     }else {
-        msg = message["greeting"] + ", " + config_member["name"] + "\n\n" + message["message"] + "\n\n" + message["why_getting_this_message"] + "\n\n" + message["plugin_notice"] +  "\n\n" + message["unsubscribe"];
+        msg = replacer(message["greeting"], config_member["name"]) + "\n\n" + replacer(message["message"], config_member["name"]) + "\n\n" + replacer(message["why_getting_this_message"], config_member["name"]) + "\n\n" + replacer(message["plugin_notice"], config_member["name"]) +  "\n\n" + replacer(message["unsubscribe"], config_member["name"]);
     }
     member.send(msg, emb).then(async (m) => {
         await sendAllGoodMorningEmbeds(member, config_member).then((gm) => {
