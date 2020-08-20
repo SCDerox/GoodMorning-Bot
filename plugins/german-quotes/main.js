@@ -17,6 +17,7 @@ module.exports.good_morning_embed = function (config_member) {
             .setFooter(strings["embed_footer"])
             .setDescription(quote["quote"] + " " + strings["by"] + " " + quote["author"])
             .setColor(0xe67e22)
+            .setTimestamp()
             .setThumbnail("https://media1.tenor.com/images/262fb60814fce40a86236094e661426d/tenor.gif?itemid=6227358"))
 
     });

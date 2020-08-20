@@ -17,6 +17,7 @@ module.exports.good_morning_embed = function (config_member) {
                 .setTitle(strings["embed_title"])
                 .setDescription(strings["your_country"] + " " + response["countryInfo"]["iso3"])
                 .setFooter(strings["embed_footer"])
+                .setTimestamp()
                 .setAuthor("disease.sh", "https://disease.sh/assets/img/rona.jpg")
                 .addField(strings["cases"], response["cases"], true)
                 .addField(strings["active"], response["active"], true)

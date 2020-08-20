@@ -27,6 +27,7 @@ module.exports.good_morning_embed = function (config_member) {
                 .setTitle(strings["weather"])
                 .setDescription(strings["your_current_location"] + config_member["plugins"]["weather"]["location"])
                 .setColor(0x3498db)
+                .setTimestamp()
                 .setFooter(strings["embed_footer"])
                 .addField(strings["currently"], strings["prefix"] + translate(forecast["current"]["skytext"]) + strings["middle"] + forecast["current"]["temperature"] + strings["suffix"])
                 .addField(strings["today_forecast"], strings["prefix"] + translate(forecast["forecast"][day_of_week]["skytextday"]) + strings["middle"] + strings["temperatures_between"] + forecast["forecast"][day_of_week]["low"] + strings["and"] + forecast["forecast"][day_of_week]["high"] + strings["suffix"])

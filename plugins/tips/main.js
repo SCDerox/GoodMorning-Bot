@@ -23,8 +23,8 @@ module.exports.good_morning_embed = function (config_member) {
             .setColor(0x1abc9c)
             .setAuthor("Good Morning Bot Tips", "https://cdn.discordapp.com/avatars/745173913428033537/da26ad5f3259500e45396a2bc57cf1eb.png")
             .setColor("GOLD")
+            .setTimestamp()
             .setThumbnail("https://media.tenor.com/images/2b7f201f7c260b42b8b789a2d7c6cbff/tenor.gif"))
-
     });
 }
 
