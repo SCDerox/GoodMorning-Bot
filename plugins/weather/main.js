@@ -22,7 +22,6 @@ module.exports.good_morning_embed = function (config_member) {
         weather.find({search: config_member["plugins"]["weather"]["location"], degreeType: 'C'}, function (err, result) {
             if (err) console.log(err);
             let forecast = result[0]
-            const day_of_week = new Date().getDay() -1;
             let embed = new MessageEmbed()
                 .setTitle(strings["weather"])
                 .setDescription(strings["your_current_location"] + config_member["plugins"]["weather"]["location"])
@@ -30,8 +29,8 @@ module.exports.good_morning_embed = function (config_member) {
                 .setTimestamp()
                 .setFooter(strings["embed_footer"])
                 .addField(strings["currently"], strings["prefix"] + translate(forecast["current"]["skytext"]) + strings["middle"] + forecast["current"]["temperature"] + strings["suffix"])
-                .addField(strings["today_forecast"], strings["prefix"] + translate(forecast["forecast"][day_of_week]["skytextday"]) + strings["middle"] + strings["temperatures_between"] + forecast["forecast"][day_of_week]["low"] + strings["and"] + forecast["forecast"][day_of_week]["high"] + strings["suffix"])
-                .addField(strings["tomorrow_forecast"], strings["prefix"] + translate(forecast["forecast"][day_of_week + 1]["skytextday"]) + strings["middle"] + strings["temperatures_between"] + forecast["forecast"][day_of_week + 1]["low"] + strings["and"] + forecast["forecast"][day_of_week + 1]["high"] + strings["suffix"])
+                .addField(strings["today_forecast"], strings["prefix"] + translate(forecast["forecast"][1]["skytextday"]) + strings["middle"] + strings["temperatures_between"] + forecast["forecast"][1]["low"] + strings["and"] + forecast["forecast"][1]["high"] + strings["suffix"])
+                .addField(strings["tomorrow_forecast"], strings["prefix"] + translate(forecast["forecast"][2]["skytextday"]) + strings["middle"] + strings["temperatures_between"] + forecast["forecast"][2]["low"] + strings["and"] + forecast["forecast"][2]["high"] + strings["suffix"])
                 .setThumbnail(forecast["current"]["imageUrl"]);
             if (forecast["location"]["alert"]) {
                 embed.addField(":warning: " + strings["warning"] + " :warning:", forecast["location"]["alert"]);
