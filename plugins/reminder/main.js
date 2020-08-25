@@ -29,15 +29,12 @@ module.exports.good_morning_embed = function (config_member) {
                 .setColor(0xf1c40f)
                 .setTimestamp()
                 .setAuthor("Good Morning Bot", "https://cdn.discordapp.com/avatars/745173913428033537/da26ad5f3259500e45396a2bc57cf1eb.png");
-            if (reminders[config_member["id"]] && reminders[config_member["id"]].count > 0) {
-                let i = 1;
-                reminders[config_member["id"]].forEach(r => {
-                    emb.addField(strings["reminder"] + " #" + i, r)
-                    i = i+1;
-                })
-            }else {
-                emb.addField(strings["error"], replacePrefix(strings["no_reminders_find"]))
-            }
+            let i = 1;
+            reminders[config_member["id"]].forEach(r => {
+                emb.addField(strings["reminder"] + " #" + i, r)
+                i = i+1;
+            })
+            if (i === 1) emb.addField(strings["error"], replacePrefix(strings["no_reminders_find"]));
             reminders[config_member["id"]] = [];
             fs.writeFile('./plugins/reminder/reminders.json', JSON.stringify(reminders), async function (err) {
                 if (err) throw err;
