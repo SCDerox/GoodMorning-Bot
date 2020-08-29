@@ -14,6 +14,7 @@ module.exports.good_morning_embed = function (config_member) {
     return new Promise(function (resolve, reject) {
         if (!config_member["plugins"]["wakatime"]["api_key"]) {
             resolve(new MessageEmbed().setTitle("missing api key for wakatime").setColor("RED").setDescription("please set a wakatime key."))
+            return;
         }
         const wakaTimeInstance = new WakaTime(config_member["plugins"]["wakatime"]["api_key"])
         wakaTimeInstance.stats('last_7_days').then((r) => {
