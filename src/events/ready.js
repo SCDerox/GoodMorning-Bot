@@ -5,7 +5,6 @@
  */
 
 exports.run = async (client, utils) => {
-    console.log("Grab yourself a cup of coffee, the bot is starting...")
     await client.user.setActivity("Bot is starting...")
 
     const activities = require("../../config/bot-activities.json")

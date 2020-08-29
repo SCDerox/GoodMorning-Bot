@@ -39,9 +39,11 @@ module.exports.sendAllGoodMorningEmbeds = async function (member, config_member)
                                 if (p["config"]["not_automatically_enabled"]) continue;
                             }
                             let pluginFile = require("../../plugins/" + p["dirName"] + "/main.js")
+                            console.log("\tWaiting for plugin " + p["dirName"] + "...")
                             await pluginFile.good_morning_embed(config_member).then((embed) => {
                                 member.send("Plugin \"" + p["config"]["name"] + "\" "+ strings["developed_by"] + " \"" + p["config"]["author"] + "\"", embed).then((m) => {
                                     messages.push(m)
+                                    console.log("\tMessage for plugin " + p["dirName"] + " send")
                                 })
                             })
                         }

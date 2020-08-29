@@ -16,6 +16,7 @@ function replacer(text, name) {
 }
 
 module.exports.send_good_morning_message = async function (member, config_member) {
+    console.log("Sending good mornign message to " + config_member["member"] + " (ID: " + config_member["id"] + ")")
     let message = good_morning_messages[Math.floor(Math.random() * good_morning_messages.length)]
     message["unsubscribe"] = replacer(message["unsubscribe"]);
     let emb;
@@ -33,7 +34,7 @@ module.exports.send_good_morning_message = async function (member, config_member
     member.send(msg, emb).then(async (m) => {
         await sendAllGoodMorningEmbeds(member, config_member).then((gm) => {
            setTimeout(function () {
-               member.send(message["to_the_first_message"] + m.url + "\n\n" + message["farawell"])
+               member.send(message["to_the_first_message"] + m.url + "\n\n" + message["farawell"]).then(() => console.log("Message successfully send."))
            }, 1000)
         })
     })

@@ -4,7 +4,7 @@
  * Any changes must be documented as per the license!
  */
 
-
+console.log("Grab yourself a cup of coffee, the bot is starting...\n\n")
 const utils = require("./src/utils/utils");
 const config = require("./config/config.json");
 const bot_strings = require("./config/bot-strings.json");
@@ -37,31 +37,38 @@ fs.readdir("./src/events/", (err, files) => {
 
 fs.readdir('./src/commands/', (err, files) => {
     if (err) console.error(err);
+    console.log("Loading build-in commands...")
     files.forEach(f => {
         let props = require(`./src/commands/${f}`);
         props.fileName = f;
         client.commands.set(props.help.name, props);
         props.help.aliases.forEach(alias => {
+            console.log("\tLoaded alias \"" + config.prefix + alias + "\" for command \""+ config.prefix + props.help.name + "\"")
             client.aliases.set(alias, props.help.name);
         });
     });
+    console.log("All build-in commands successfully loaded.\n\n")
 });
 
 // Load commands from plugins
 
 fs.readdir('./plugins/', (err, files) => {
     if (err) console.error(err);
+    console.log("Loading plugins...")
     files.forEach(f => {
-        console.log("\nLoading plugin " + f)
         let props = require(`./plugins/${f}/main.js`);
+        console.log("\nLoading plugin \"" + f + "\" by \"" + props.config.author + "\"")
         props.fileName = f;
+        if (props.config.send_good_morning_embed) console.log("\tRegistered Good-Morning-Embed")
+        else console.log("\tGood-Morning-Embed for this plugin not enabled")
         if (props.config.commands) {
             props.config.commands.forEach(alias => {
-                console.log("\tLoaded alias: " + alias)
+                console.log("\tLoaded alias: " + config.prefix + alias)
                 client.pluginCommands.set(alias, props.fileName);
             });
-        } else console.log("\tplugin has no commands")
+        } else console.log("\tPlugin has no commands")
     });
+    console.log("\nAll plugins successfully loaded.\n\n")
 });
 
 // Here because something could happen with the command handler
