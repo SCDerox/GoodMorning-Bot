@@ -9,13 +9,11 @@ const {MessageEmbed} =  require("discord.js");
 const strings = require("./strings.json")
 const config = require("./config.json")
 
-
-module.exports.good_morning_embed = function (config_member) {
-    return new Promise(function (resolve, reject) {
-        var keys = {
+function popolarArticelsEmbed() {
+    return new Promise(function (resolve) {
+        const nyt = require('newyorktimes')({
             most_popular: config["most_popular_api_key"]
-        };
-        var nyt = require('newyorktimes')(keys);
+        });
         nyt.query('https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=' + config["most_popular_api_key"], function (err, json) {
             let articels = JSON.parse(json.body)
             articels = articels["results"]
@@ -23,7 +21,7 @@ module.exports.good_morning_embed = function (config_member) {
             let description = "";
             for (let i in articels) {
                 if (i > 5) continue;
-                description = description + "\n[" + articels[i]["title"] + "](" + articels[i]["url"] + ")"
+                description = description + "\n• [" + articels[i]["title"] + "](" + articels[i]["url"] + ")"
             }
             resolve(new MessageEmbed()
                 .setTitle(strings["embed_title"])
@@ -38,9 +36,26 @@ module.exports.good_morning_embed = function (config_member) {
 }
 
 
+module.exports.good_morning_embed = function () {
+    return new Promise(function (resolve) {
+        popolarArticelsEmbed().then(e => {
+            resolve(e);
+        })
+    });
+}
+
+module.exports.commandHandler = async function (client, msg) {
+    popolarArticelsEmbed().then(e => {
+        msg.channel.send(e)
+    })
+}
+
+
 module.exports.config = {
     "name": "New York Time Popular Articles",
     "author": "SCDerox",
     "description": "Shows today's morst popular articels on NYT",
-    "send_good_morning_embed": true
+    "send_good_morning_embed": true,
+    "commands": ["news", "n"]
+
 }
