@@ -64,7 +64,7 @@ fs.readdir('./plugins/', (err, files) => {
     });
 });
 
-// Here because something could happen with the
+// Here because something could happen with the command handler
 
 client.on("message", async message => {
     try {
