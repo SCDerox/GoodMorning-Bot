@@ -3,6 +3,7 @@
     "active": true,
     "name": "Simon",
     "id": "413429490342035466",
+    "disable-confirmation": false,
     "plugins": {
       "weather": {
         "location": "Fürstenried, Munich, Germany"

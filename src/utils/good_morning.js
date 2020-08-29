@@ -16,26 +16,31 @@ function replacer(text, name) {
 }
 
 module.exports.send_good_morning_message = async function (member, config_member) {
-    console.log("Sending good mornign message to " + config_member["member"] + " (ID: " + config_member["id"] + ")")
-    let message = good_morning_messages[Math.floor(Math.random() * good_morning_messages.length)]
-    message["unsubscribe"] = replacer(message["unsubscribe"]);
-    let emb;
-    let msg;
-    if (message["embed"]) {
-        emb = new MessageEmbed()
-            .setThumbnail("https://cdn.discordapp.com/avatars/745173913428033537/da26ad5f3259500e45396a2bc57cf1eb.png")
-            .setTitle(replacer(message["greeting"], config_member["name"]))
-            .setDescription(replacer(message["message"], config_member["name"]) + "\n\n" + replacer(message["why_getting_this_message"], config_member["name"]) + "\n\n" + replacer(message["plugin_notice"], config_member["name"]) + "\n\n" + replacer(message["unsubscribe"], config_member["name"]))
-            .setColor(message["embed"]["color"]);
-        if (message["embed"]["image"]) emb.setImage(message["embed"]["image"])
-    }else {
-        msg = replacer(message["greeting"], config_member["name"]) + "\n\n" + replacer(message["message"], config_member["name"]) + "\n\n" + replacer(message["why_getting_this_message"], config_member["name"]) + "\n\n" + replacer(message["plugin_notice"], config_member["name"]) +  "\n\n" + replacer(message["unsubscribe"], config_member["name"]);
-    }
-    member.send(msg, emb).then(async (m) => {
-        await sendAllGoodMorningEmbeds(member, config_member).then((gm) => {
-           setTimeout(function () {
-               member.send(message["to_the_first_message"] + m.url + "\n\n" + message["farawell"]).then(() => console.log("Message successfully send."))
-           }, 1000)
+    return new Promise(resolve => {
+        console.log("Sending good mornign message to " + config_member["member"] + " (ID: " + config_member["id"] + ")")
+        let message = good_morning_messages[Math.floor(Math.random() * good_morning_messages.length)]
+        message["unsubscribe"] = replacer(message["unsubscribe"]);
+        let emb;
+        let msg;
+        if (message["embed"]) {
+            emb = new MessageEmbed()
+                .setThumbnail("https://cdn.discordapp.com/avatars/745173913428033537/da26ad5f3259500e45396a2bc57cf1eb.png")
+                .setTitle(replacer(message["greeting"], config_member["name"]))
+                .setDescription(replacer(message["message"], config_member["name"]) + "\n\n" + replacer(message["why_getting_this_message"], config_member["name"]) + "\n\n" + replacer(message["plugin_notice"], config_member["name"]) + "\n\n" + replacer(message["unsubscribe"], config_member["name"]))
+                .setColor(message["embed"]["color"]);
+            if (message["embed"]["image"]) emb.setImage(message["embed"]["image"])
+        }else {
+            msg = replacer(message["greeting"], config_member["name"]) + "\n\n" + replacer(message["message"], config_member["name"]) + "\n\n" + replacer(message["why_getting_this_message"], config_member["name"]) + "\n\n" + replacer(message["plugin_notice"], config_member["name"]) +  "\n\n" + replacer(message["unsubscribe"], config_member["name"]);
+        }
+        member.send(msg, emb).then(async (m) => {
+            await sendAllGoodMorningEmbeds(member, config_member).then((gm) => {
+                setTimeout(function () {
+                    member.send(message["to_the_first_message"] + m.url + "\n\n" + message["farawell"]).then((tlm) => {
+                        console.log("Message successfully send.")
+                        resolve(tlm)
+                    })
+                }, 1000)
+            })
         })
     })
 }

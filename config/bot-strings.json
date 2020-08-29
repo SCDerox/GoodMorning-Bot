@@ -19,5 +19,10 @@
   "developed_by": "entwicklet von",
   "plugin_does_not_exist_or_not_set": "Dieses Plugin exestiert nicht oder es fehlt ein Argument",
   "successfuly_edited": "Erfolgreich geändert.",
-  "only_pns": "Um deine Privatsphäre zu schützten, reagiere ich nur in Privatnachrichten auf deine Commands!"
+  "only_pns": "Um deine Privatsphäre zu schützten, reagiere ich nur in Privatnachrichten auf deine Commands!",
+  "automatic_unsubscribe": {
+    "embed_title": "Noch da?",
+    "embed_description": "Um sicherzustellen, dass du keine Serverresourcen verbrauchst, haben wir dich nach dieser Nachricht abgemeldet. Das heißt, dass du leider keine Guten-Morgen-Nachrichten bekommen wirst ):. Aber keine Angst, auch morgen kannst du wieder mit einer Nachricht begrüßt werden! Schreib dazu einfach `%prefix%subscribe` und du hörst morgen wieder von mir!"
+  },
+  "important_message": ":warning: Wichtige Nachricht :warning:"
 }
