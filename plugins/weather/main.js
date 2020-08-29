@@ -17,8 +17,8 @@ function translate(text) {
     }
 }
 
-module.exports.good_morning_embed = function (config_member) {
-    return new Promise(function (resolve, reject) {
+async function weatherEmbed(config_member) {
+    return new Promise(function (resolve) {
         weather.find({search: config_member["plugins"]["weather"]["location"], degreeType: 'C'}, function (err, result) {
             if (err) console.log(err);
             let forecast = result[0]
@@ -41,11 +41,25 @@ module.exports.good_morning_embed = function (config_member) {
     });
 }
 
+module.exports.good_morning_embed = function (config_member) {
+    return new Promise(function (resolve) {
+        weatherEmbed(config_member).then(w => {
+            resolve(w);
+        })
+    });
+}
+module.exports.commandHandler = async function (client, msg, args, utils, members) {
+    weatherEmbed(members[msg.author.id]).then(w => {
+        msg.channel.send(w)
+    })
+}
+
 
 module.exports.config = {
     "name": "Weather",
     "author": "SCDerox",
     "description": "Shows the current weather in the good mornig message",
     "send_good_morning_embed": true,
-    "need_config": true
+    "need_config": true,
+    "commands": ["weather", "w"]
 }
