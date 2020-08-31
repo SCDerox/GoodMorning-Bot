@@ -9,8 +9,8 @@ const {MessageEmbed} =  require("discord.js");
 const strings = require("./strings.json")
 const quotes = require("./quotes.json")
 
-module.exports.good_morning_embed = function (config_member) {
-    return new Promise(function (resolve, reject) {
+module.exports.good_morning_embed = function () {
+    return new Promise(function (resolve) {
         let quote = quotes[Math.floor(Math.random() * quotes.length)]
         resolve(new MessageEmbed()
             .setTitle(strings["embed_title"])
@@ -28,5 +28,6 @@ module.exports.config = {
     "name": "German-Quotes",
     "author": "SCDerox",
     "description": "One of " + quotes.length +  " quotes in german",
-    "send_good_morning_embed": true
+    "send_good_morning_embed": true,
+    "not_automatically_enabled": true // It's german so I thought it's better if it's disabled by default
 }

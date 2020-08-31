@@ -1,10 +1,11 @@
 {
-  "Cloudy": "Bewölkt",
-  "Rain Showers": "Regenschauer",
-  "Partly Sunny": "Teilweise sonnig",
-  "Rain": "Regen",
-  "Sunny": "Sonnig",
-  "Light Rain": "Leichter Regen",
-  "Mostly Cloudy": "Großteils Bevölkt",
-  "Mostly Sunny": "Großteils Sonnig"
+  "note": "You can translate the weather states from the api here",
+  "Cloudy": "Cloudy",
+  "Rain Showers": "Rain Showers",
+  "Partly Sunny": "Partly Sunny",
+  "Rain": "Rain",
+  "Sunny": "Sunny",
+  "Light Rain": "Light Rain",
+  "Mostly Cloudy": "Mostly Cloudy",
+  "Mostly Sunny": "Mostly Sunny"
 }

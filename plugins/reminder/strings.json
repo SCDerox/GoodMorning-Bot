@@ -1,10 +1,10 @@
 {
-  "successfully_added_reminder": "Erinnerung erfolgreich hinzugefügt\nIch werde dich morgen an `%reminder%` erinnern",
-  "success": "Erfolg!",
-  "no_reminders_find": "Es wurde keine Erinnerungen gefunden\nDu kannst Erinnerungen mit `%prefix%reminder <Erinnerung>` erstellen",
-  "embed_title": "Erinnerungen",
-  "embed_description": "Hier sind deine Erinnerungen für heute, die du eingestellt hast",
-  "embed_footer": "Du kannst erinnerungen mit %prefix%reminder <Erinnerung> einstellen",
-  "reminder": "Erinnerung",
-  "error": "Ein Fehler ist aufgetreten"
+  "successfully_added_reminder": "Reminder successfully set.\nI'm going to remind you to `%reminder%`.",
+  "success": "Success!",
+  "no_reminders_find": "You haven't any remidners set.\nSet a reminder with `%prefix%reminder <Content>`",
+  "embed_title": "Reminder",
+  "embed_description": "I want to reminde you.",
+  "embed_footer": "Set reminders with %prefix%reminder",
+  "reminder": "Reminder",
+  "error": "A error occured."
 }

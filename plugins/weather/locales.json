@@ -1,15 +1,15 @@
 {
-  "weather": "Wetter",
-  "your_current_location": "Dein aktueller Standort: ",
-  "currently": "Aktuell",
-  "today_forecast": "Vohersage für Heute",
-  "tomorrow_forecast": "Vohersage für Morgen",
+  "weather": "Weather",
+  "your_current_location": "Your current location: ",
+  "currently": "Current",
+  "today_forecast": "Brodca für Heute",
+  "tomorrow_forecast": "Forecast for Morgen",
   "prefix": "",
-  "middle": " bei ",
+  "middle": " at ",
   "suffix": " °C",
-  "temperatures_between": "Temperaturen zwischen ",
-  "and": " und ",
-  "warning": "Aktuell liegt eine Warnung für deinen Standort vor",
-  "embed_footer": "Alle Angaben ohne Gewähr - Daten von weather.service.msn.com",
-  "translation_missing": "Übersetzung fehlend"
+  "temperatures_between": "temperatures between ",
+  "and": " and ",
+  "warning": "We found a warning at your location.",
+  "embed_footer": "Data from weather.service.msn.com",
+  "translation_missing": "Translation missing"
 }

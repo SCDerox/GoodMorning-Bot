@@ -1,8 +1,3 @@
 [
-  "Du kannst anpassen, welche Plugins in deinen Nachrichten geschickt werden! Nutzte dafür `%prefix%plugins`",
-  "Du kannst Vorschläge für diesen Bot bei GitHub einreichen! Mehr erfahren mit `%prefix%about`",
-  "Du kannst dein eigenes Plugin entwickelen und einreichen! Mehr erfahren mit `%prefix%about`",
-  "Dieser Bot ist noch in der Beta-Phase und es funktioniert nicht alles.",
-  "Es kommen wöchentlich neue Plugins hinzu! Neue Plugins werden automatisch aktiviert",
-  "Du kannst den Bot auf deinen Server einladen: https://sc-net.work/add-good-morning-bot"
+  "Submit suggestions for this bot on GitHub! `%prefix%about`"
 ]

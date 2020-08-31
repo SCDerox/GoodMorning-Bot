@@ -1,10 +1,10 @@
 {
-  "embed_title": "Covid19-Zahlen",
-  "your_country": "Du siehst Zahlen auf folgendem Land: ",
-  "active": "Aktuell Infizierte",
-  "cases": "Bisher Infizierte",
-  "recovered": "Bisher geheilte",
-  "critical": "Kritische Infektionsverläufe",
-  "deaths": "Bisherige Tote",
-  "embed_footer": "Alle Angaben ohne Gewähr | Daten von disease.sh"
+  "embed_title": "Covid19-Statistics",
+  "your_country": "This numbers are from the following country: ",
+  "active": "Currently infected",
+  "cases": "All Cases",
+  "recovered": "Recovered",
+  "critical": "Critical",
+  "deaths": "Deaths",
+  "embed_footer": "Data from disease.sh"
 }

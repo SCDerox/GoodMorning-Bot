@@ -6,7 +6,7 @@
     "disable-confirmation": false,
     "plugins": {
       "weather": {
-        "location": "Fürstenried, Munich, Germany"
+        "location": "Munich, Germany"
       },
       "covid19": {
         "country": "DE"
@@ -17,13 +17,16 @@
     },
     "plugins_settings": {
       "covid19": true,
+      "current-time": true,
+      "german-quotes": false,
+      "inspirobot": true,
       "nasa-image-of-the-day": true,
       "nyt-most-popular-articels": true,
       "tronald-dump": true,
+      "reminder": true,
       "weather": true,
       "tips": true,
-      "current-time": true,
-      "german-quotes": true
+      "wakatime": false
     }
   }
 }

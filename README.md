@@ -1,7 +1,7 @@
 Good Morning Discord-Bot
 ---
 This discord-bot greets you every day, when you are first online. 
-You can configure what messages you want to get with plugins. [Read more about Plugins](https://github.com/SCDerox/GoodMorning-Bot/wiki).
+You can configure what messages you want to get with plugins.
 
 ---
 
@@ -22,8 +22,8 @@ to do this some plugin folders.
 ---
 
 ### Add a member
-Currently you only can add members in your `members.json` file. I'm also working on a command for that.
-A example for a user-configuration can be found in `members.example.json`.
+Currently, you only can add members in your `members.json` file. I'm also working on a command for that.
+An example for a user-configuration can be found in `members.example.json`.
 
 ---
 ### Plugins
@@ -34,9 +34,7 @@ SOON™
 ### Important:
 `This bot is desinged to work for me and some friends and does not need database. You should not use this bot as a public one, because everything is stored in JSON files (Note: I will maybe add DB-support later)`
 
-`This repositiory conains shitcode: I developed most of this code on one day (;`
-
-`My English is really bad, so sorry ):`
+`This repositiory conains shitcode: It's my first public repo (with code)`
 
 ---
 
