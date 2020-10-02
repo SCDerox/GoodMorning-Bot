@@ -14,10 +14,9 @@ The main bot also has some localization-files in the config folder.
 ### Installation
 1) Copy this repository
 2) Install dependencies with `npm i`
-3) Rename *every* `something.example.json` file to `something.json` and configure them. You may need 
-to do this some plugin folders.
+3) Run `npm run setup` and edit every file shown
 4) Delete the `example-plugin` folder in your `plugins` folder, if you don't need it
-5) Start the bot with `npm test` (or with pm2 (suggested): `pm2 start GoodMorningBot.js`)
+5) Start the bot with `npm start` (or with pm2 (suggested): `pm2 start GoodMorningBot.js`)
 
 ---
 
