@@ -4,7 +4,8 @@
   "description": "A Discord-Bot ",
   "main": "GoodMorningBot.js",
   "scripts": {
-    "test": "node GoodMorningBot.js"
+    "test": "node GoodMorningBot.js",
+    "start": "node GoodMorningBot.js"
   },
   "repository": {
     "type": "git",
